@@ -31,5 +31,15 @@ for (let i in bands) {
   title.innerHTML = bands[i].name;
   bandDiv.appendChild(title);
 
+  for (let member in bands[i].instruments) {
+    let instrument = bands[i].instruments[member];
+
+    let memberDiv = document.createElement("div");
+
+    memberDiv.innerHTML = member + ": " + instrument;
+    
+    bandDiv.appendChild(memberDiv);
+  }
+
   main.appendChild(bandDiv);
 }
